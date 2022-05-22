@@ -13,7 +13,7 @@ super + F1
 
 # Browser
 super + F2
-	brave
+	brave-browser
 
 #Inks
 super + F3

@@ -9,34 +9,45 @@
 #
 SKOS_WORKDIR=$(pwd)
 
-######################################################
-####  INSTALL - ARCHLINUX BASED DISTRO            ####
-######################################################
+
+####  INSTALL - ARCHLINUX BASED DISTRO      
+
 
 INSTALL_ARCH () 
 {
-echo "It's Arch Linux! Let's GO!"
+
+    echo "
+    ############################################################
+    #
+    #   :( :( :(
+    #   Sorry, but Arch Linux is not supported yet
+    #   Stay tuned for updates: https://github.com/skolano/SKOs
+    #
+    ############################################################
+    "
+
+#echo "It's Arch Linux! Let's GO!"
 
 ###  Update & Upgrade OS
-sudo pacman -Syu
-
+#sudo pacman -Syu
+#
 ### Install Aur helper
-sudo pacman -S --needed base-devel --noconfirm
-sudo pacman -S git --noconfirm
-cd $SKOS_WORKDIR
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si PKGBUILD
-
-cd $SKOS_WORKDIR
-yay -Sy --noconfirm - < pkglist
+#sudo pacman -S --needed base-devel --noconfirm
+#sudo pacman -S git --noconfirm
+#cd $SKOS_WORKDIR
+#git clone https://aur.archlinux.org/yay.git
+#cd yay
+#makepkg -si PKGBUILD
+#
+#cd $SKOS_WORKDIR
+#yay -Sy --noconfirm - < pkglist
 
 }
 
 
-######################################################
-####  INSTALL - UBUNTU BASED DISTRO               ####
-######################################################
+
+####  INSTALL - UBUNTU BASED DISTRO  
+
 
 INSTALL_UBUNTU () 
 {
@@ -52,9 +63,8 @@ INSTALL_UBUNTU ()
 }
 
 
-######################################################
-####  INSTALL - FEDORA BASED DISTRO               ####
-######################################################
+####  INSTALL - FEDORA BASED DISTRO               
+
 
 INSTALL_FEDORA () 
 {
@@ -67,14 +77,15 @@ INSTALL_FEDORA ()
 }
 
 
-######################################################
-####  DISTRO CHALLANGE & INSTAL BSPWM             ####
-######################################################
+
+####  DISTRO CHALLANGE & INSTAL BSPWM           
+
 
 DISTRO_ARCH="ID_LIKE=arch"
 DISTRO_UBUNTU="ID_LIKE=ubuntu"
-DISTRO_FEDORA="ID_LIKE=fedora"
+DISTRO_FEDORA="ID=fedora"
 DISTRONAME=$(grep '^ID_LIKE' /etc/os-release)
+DISTRONAME=$(grep '^ID' /etc/os-release)
 if [[ "$DISTRO_ARCH" == "$DISTRONAME"  ]]; then
  
     INSTALL_ARCH
@@ -101,14 +112,15 @@ else
 fi 
 
 
-## Moving files to specyfic folders
+#### MOVE CONFIG FILES TO SPECYFIC FOLDERS
 cd $SKOS_WORKDIR
 rsync -avh dotfiles/ $HOME
-rsync -avh usr/share/ /usr/share
+sudo rsync -avh usr/share/ /usr/share
 
 echo "
 BSPWM is installed. Please reboot your computer.
 "
+
 
 
 
