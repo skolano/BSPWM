@@ -76,6 +76,14 @@ INSTALL_FEDORA ()
 
 }
 
+INSTALL_BRAVE () {
+
+sudo dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install brave-browser
+
+}
 
 
 ####  DISTRO CHALLANGE & INSTAL BSPWM           
@@ -97,6 +105,7 @@ elif [[ "$DISTRO_UBUNTU" == "$DISTRONAME"  ]]; then
 elif [[ "$DISTRO_FEDORA" == "$DISTRONAME"  ]]; then
   
     INSTALL_FEDORA
+    INSTALL_BRAVE
 
 else
     echo "
@@ -110,6 +119,8 @@ else
     "
     exit
 fi 
+
+
 
 
 #### MOVE CONFIG FILES TO SPECYFIC FOLDERS
