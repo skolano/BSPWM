@@ -51,15 +51,13 @@ INSTALL_ARCH ()
 
 INSTALL_UBUNTU () 
 {
-    echo "
-    ############################################################
-    #
-    #   :( :( :(
-    #   Sorry, but Ubuntu is not supported yet
-    #   Stay tuned for updates: https://github.com/skolano/SKOs
-    #
-    ############################################################
-    "
+sudo apt update
+sudo apt install -y $(< ubuntupkg.txt)
+
+# Install alacritty from ppa
+sudo add-apt-repository ppa:aslatter/ppa
+sudo apt update
+sudo apt install alacritty
 }
 
 
