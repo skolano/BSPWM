@@ -16,31 +16,21 @@ SKOS_WORKDIR=$(pwd)
 INSTALL_ARCH () 
 {
 
-    echo "
-    ############################################################
-    #
-    #   :( :( :(
-    #   Sorry, but Arch Linux is not supported yet
-    #   Stay tuned for updates: https://github.com/skolano/SKOs
-    #
-    ############################################################
-    "
-
-#echo "It's Arch Linux! Let's GO!"
+echo "It's Arch Linux! Let's GO!"
 
 ###  Update & Upgrade OS
-#sudo pacman -Syu
-#
+sudo pacman -Syu
+
 ### Install Aur helper
-#sudo pacman -S --needed base-devel --noconfirm
-#sudo pacman -S git --noconfirm
-#cd $SKOS_WORKDIR
-#git clone https://aur.archlinux.org/yay.git
-#cd yay
-#makepkg -si PKGBUILD
-#
-#cd $SKOS_WORKDIR
-#yay -Sy --noconfirm - < pkglist
+sudo pacman -S --needed base-devel --noconfirm
+sudo pacman -S git --noconfirm
+cd $SKOS_WORKDIR
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si PKGBUILD
+
+cd $SKOS_WORKDIR
+yay -Sy --noconfirm - < archpkg.txt
 
 }
 
