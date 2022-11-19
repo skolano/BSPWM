@@ -13,7 +13,7 @@ super + F1
 
 # Browser
 super + F2
-	brave-browser
+	firefox
 
 #Inks
 super + F3
@@ -74,7 +74,8 @@ super + c
 
 #Htop
 super + h
-    alacritty 'htop task manager' -e htop
+  alacritty -e htop 'htop task manager' 
+
 
 # Lock Screen
 super + l
@@ -90,7 +91,7 @@ super + s
 
 # Ranger - Explorer
 super + e
-    ranger
+    alacritty -e ranger
 
 #Rofi theme selector
 super + r
