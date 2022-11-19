@@ -23,6 +23,7 @@ xfce4-notifyd
 xfce4-power-manager
 xfce4-settings
 volumeicon
+xsetroot
 zsh
 ncmpcpp
 neofetch
