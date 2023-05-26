@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/skolano/.config/bspwm/wall.jpg' 
+feh --no-fehbg --bg-scale '~/.config/bspwm/wall.jpg' 
