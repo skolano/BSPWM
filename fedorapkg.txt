@@ -9,6 +9,7 @@ lxappearance
 network-manager-applet
 nitrogen
 picom
+plank
 i3lock
 polybar
 rofi

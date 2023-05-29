@@ -12,7 +12,7 @@ lxappearance
 nitrogen
 network-manager-applet
 picom
-plunk
+plank
 polybar
 sxhkd
 thunar
