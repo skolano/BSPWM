@@ -67,6 +67,9 @@ bspc rule -a VirtualBox Manager state=fullscreen
 bspc rule -a VirtualBox Machine state=fullscreen
 #bspc rule -a Gimp state=fullscreen
 
+# Plank rule
+bspc rule -a Plank layer=above manage=on border=off
+
 #Floating applications
 bspc rule -a Arandr state=floating
 bspc rule -a feh state=floating

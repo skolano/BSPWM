@@ -4,6 +4,7 @@ dunst
 feh
 ffmpeg
 i3lock
+plunk
 imagemagick
 lxappearance
 nitrogen

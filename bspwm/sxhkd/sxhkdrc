@@ -13,23 +13,23 @@ super + F1
 
 # Browser
 super + F2
-	flatpak run org.mozilla.firefox
+    firefox
 
-#Inks
+# Email Client
 super + F3
-    inkscape
+    thunderbird
 
-#Gimp
+# File Manager
 super + F4
-    gimp
+    thunar
 
-#Meld
+# Visual Studio Code
 super + F5
-    meld
+    code
 
-#Vlc
+# KeepassXC
 super + F6
-    vlc --video-on-top
+    keepassxc
 
 #Virtualbox
 super + F7

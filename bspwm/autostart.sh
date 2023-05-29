@@ -41,16 +41,17 @@ conky -c /home/skolano/.config/conky/Stargate/CAC-Stargate-8cores-LUA.conkyrc & 
 conky -c /home/skolano/.config/conky/MOWGLI-Qlocktwo.conkyrc & sleep 1s
 #run variety & ## - Manager tapet
 run nm-applet &
-run pamac-tray &
+#run pamac-tray &
 run xfce4-power-manager &
 numlockx on &
-blueberry-tray &
+#blueberry-tray &
 picom --config $HOME/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 volumeicon &
 nitrogen --restore &
-run caffeine &
+plank &
+#run caffeine &
 #run vivaldi-stable &
 #run firefox &
 #run thunar &
